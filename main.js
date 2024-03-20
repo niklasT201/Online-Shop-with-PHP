@@ -1,4 +1,4 @@
-//Fuction for the Slideshow Buttons
+// Function for the Slideshow Buttons
 let slideIndex = 0;
 showSlides();
 
@@ -9,24 +9,42 @@ function plusSlides(n) {
 
 function showSlides() {
   const cards = document.querySelectorAll('.card');
+  const screenWidth = window.innerWidth || document.documentElement.clientWidth;
   const totalCards = cards.length;
-  const maxVisibleCards = 5;
 
-  // Ensure slideIndex stays within bounds
-  if (slideIndex < 0) {
-    slideIndex = 0;
-  } else if (slideIndex > totalCards - maxVisibleCards) {
-    slideIndex = totalCards - maxVisibleCards;
-  }
-
-  cards.forEach((card, index) => {
-    if (index >= slideIndex && index < slideIndex + maxVisibleCards) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
+  if (screenWidth <= 720) {
+    // Show only one card at a time if screen width is 720 pixels or less
+    if (slideIndex < 0) {
+      slideIndex = 0;
+    } else if (slideIndex >= totalCards) {
+      slideIndex = totalCards - 1;
     }
-  });
+
+    cards.forEach((card, index) => {
+      if (index === slideIndex) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  } else {
+    // Show up to 5 cards if screen width is larger than 720 pixels
+    if (slideIndex < 0) {
+      slideIndex = 0;
+    } else if (slideIndex > totalCards - 5) {
+      slideIndex = totalCards - 5;
+    }
+
+    cards.forEach((card, index) => {
+      if (index >= slideIndex && index < slideIndex + 5) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
 }
+
 
 
 //PHP Insert Data for the products into the Products Database

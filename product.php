@@ -1,3 +1,8 @@
+<?php
+session_start(); // Moved session_start to the beginning
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
