@@ -1,0 +1,327 @@
+body {
+    display: flex;
+    background-color: #9DC183;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Background styles */
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.005) 0, rgba(255, 255, 255, 0.005) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 40px 20px; /* sets the size of the grid */
+    background-attachment: fixed;
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 320px;
+ 
+    text-align: center; /* Center align text */
+}
+
+
+.header h1  {   
+    color: white;
+    font-size: 4.5rem;
+    margin-top: 120px;
+}
+
+/* Style the navigation bar */
+.navbar, .navbar2 {
+  height: 70px;
+  width: 100%;
+  background-color: #001F3F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Navbar links */
+.navbar a, .navbar2 a {
+  justify-content: center;
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover, .navbar2 a:hover {
+  background-color: black;
+}
+
+.navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+
+.navbar button[type="submit"] {
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  background: #d7d7d7;
+  padding: 6px;
+}
+
+.navbar2 a {
+  font-size: 15px;
+}
+
+.slideshow-container {
+  display: flex; /* Use flexbox for the container */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: center; /* Center the cards horizontally */
+}
+/* 
+.slideshow-container label {
+  color: white;
+  
+}
+ */
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 73%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 6px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  margin-left: 135px;
+}
+
+.next {
+  right: 0;
+  margin-right: 135px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.card {
+  margin: 10px;
+  display: flex;
+  color: black;
+  align-items: center;
+  width: 50vw;
+  max-width: 235px;
+  padding: 50px 30px 50px 20px;
+  background-color: antiquewhite;
+  border-radius: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card img {
+  max-width: 280px;
+  width: 13vw;
+  height: 200px;
+  border-radius: inherit;
+  margin-right: 30px;
+}
+
+.card h4  {
+  font-size: 110%;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.card p {
+  font-size: 90%;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.card a.primary {
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 16px 50px;
+  font-size: 90%;
+  border-radius: 6px;
+  min-width: 120px;
+  text-decoration: none; /* Added to remove underline */
+}
+
+.card a.primary:hover {
+  background-color: #eee; /* Example hover background color */
+  color: #333; /* Example hover text color */
+}
+
+
+
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style form groups */
+.form-group {
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+/* Style form labels */
+.form-group label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.form-group input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+.container input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.container input[type=submit]:hover {
+  background-color: #eee; 
+  color: #333; 
+}
+
+
+
+
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+
+.footer1{
+  height: 200px;
+  background-color:#333;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.footer1 p {
+  color: white;
+  font-size: 18px;
+}
+
+.footer2 {
+  background-color: #7F50FF;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  height: 50px;
+  
+}
+
+.footer2 a {
+  color: white;
+  font-size: 18px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+
+@media (max-width: 720px) {
+
+  .header {
+    position: relative; /* Changed to relative */
+    text-align: center; /* Center align text */
+    height: auto; /* Adjust height */
+    padding: 20px 0; /* Add padding */
+  }
+
+  .header h1  {   
+    font-size: 3rem; /* Adjust font size */
+    margin-top: 0; /* Remove top margin */
+  }
+
+  .card {
+    margin: 20px auto; /* Center align cards */
+    padding: 20px; /* Add padding */
+    width: 80%; /* Adjust width */
+    max-width: 300px; /* Set max-width */
+    text-align: center; /* Center align text */
+  }
+
+    .card h4 {
+        font-size: 30px;
+    }
+
+    .card img {
+        width: 75%;
+        max-width: 1000px;
+    }
+
+    .card button {
+        min-width: 160px;
+    }
+
+    .navbar, .navbar2 {
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: space-around; /* Distribute items evenly */
+      height: auto; /* Adjust height */
+    }
+  
+    .navbar a, .navbar2 a {
+      float: none; /* Remove float */
+      display: inline-block; /* Display as inline block */
+      margin: 5px; /* Add margin */
+    }
+  
+    .navbar input[type=text] {
+      width: calc(45% - 5px); /* Adjusted width */
+      margin-right: 5px; /* Added margin-right */
+    }
+  
+    .navbar button[type="submit"] {
+      width: calc(45% - 5px); /* Adjusted width */
+      margin-left: 5px; /* Added margin-left */
+    }
+
+  
+    /* Adjust vertical alignment for search bar and submit button */
+    .navbar input[type=text], .navbar button[type="submit"] {
+      vertical-align: middle;
+    }
+}
+
