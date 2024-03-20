@@ -127,6 +127,57 @@
         background-color: #eee; /* Example hover background color */
         color: #333; /* Example hover text color */
     }
+
+    @media (max-width: 720px) {
+        .container {
+                max-width: 80%; /* Adjusted max-width */
+                margin-top: 20px; /* Adjusted margin-top */
+                margin-bottom: 20px; /* Adjusted margin-bottom */
+            }
+
+            .product-item {
+                flex-direction: column; /* Adjusted flex direction */
+            }
+
+            .product-item img {
+                max-width: 100%; /* Adjusted image width */
+                margin: 0 auto 20px; /* Adjusted margin */
+            }
+
+            .back-link {
+                width: 65%; /* Adjusted width */
+                margin-left: 0; /* Adjusted margin-left */
+                margin-top: 20px;
+            }
+
+            .navbar {
+                flex-wrap: wrap; /* Allow items to wrap to the next line */
+                justify-content: space-around; /* Distribute items evenly */
+                height: auto; /* Adjust height */
+                }
+  
+            .navbar a {
+                float: none; /* Remove float */
+                display: inline-block; /* Display as inline block */
+                margin: 5px; /* Add margin */
+                }
+
+            .navbar input[type=text] {
+                width: calc(45% - 5px); /* Adjusted width */
+                margin-right: 5px; /* Added margin-right */
+                }
+  
+            .navbar button[type="submit"] {
+                width: calc(45% - 5px); /* Adjusted width */
+                margin-left: 5px; /* Added margin-left */
+                }
+
+  
+            /* Adjust vertical alignment for search bar and submit button */
+            .navbar input[type=text], .navbar button[type="submit"] {
+                vertical-align: middle;
+                }
+             }
 </style>
 
 <body>
@@ -139,7 +190,7 @@
        
         <?php
                 // Check if the user is logged in (i.e., if the session variable is set)
-                session_start();
+               
                 if(isset($_SESSION['name'])) {
                     echo '<a href="account.php">Account</a>';
                     echo '<a href="logout.php">Log Out</a>';

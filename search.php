@@ -117,10 +117,49 @@
         .primary:hover {
             background-color: #0056b3;
         }
+
+        @media (max-width: 720px) {
+            .navbar {
+                flex-wrap: wrap; /* Allow items to wrap to the next line */
+                justify-content: space-around; /* Distribute items evenly */
+                height: auto; /* Adjust height */
+                }
+  
+            .navbar a {
+                float: none; /* Remove float */
+                display: inline-block; /* Display as inline block */
+                margin: 5px; /* Add margin */
+                }
+
+            .navbar input[type=text] {
+                width: calc(45% - 5px); /* Adjusted width */
+                margin-right: 5px; /* Added margin-right */
+                }
+  
+            .navbar button[type="submit"] {
+                width: calc(45% - 5px); /* Adjusted width */
+                margin-left: 5px; /* Added margin-left */
+                }
+
+  
+            /* Adjust vertical alignment for search bar and submit button */
+            .navbar input[type=text], .navbar button[type="submit"] {
+                vertical-align: middle;
+                }
+
+            .product-container {
+                margin-left: 30px;
+                justify-content: center;
+            }
+
+            .product-item {
+                width: 80%;
+            }
+        }
     </style>
 <body>
     <div class="navbar">
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a class="active" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
         <form action="search.php" method="GET"> <!-- Changed -->
         <input type="text" name="query" placeholder="Search.."> <!-- Changed -->
         <button type="submit"><i class="fa fa-search"></i>Submit</button>
@@ -128,7 +167,6 @@
        
         <?php
                 // Check if the user is logged in (i.e., if the session variable is set)
-                session_start();
                 if(isset($_SESSION['name'])) {
                     echo '<a href="account.php">Account</a>';
                     echo '<a href="logout.php">Log Out</a>';
