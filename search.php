@@ -23,7 +23,7 @@ session_start(); // Moved session_start to the beginning
     .navbar {
         height: 70px;
         width: 100%;
-        background-color: #001F3F;
+        background-color: #3e5f8a;
         display: flex;
         justify-content: center;
         align-items: center;
